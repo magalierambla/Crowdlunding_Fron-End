@@ -1,117 +1,162 @@
 <body>
-
+    <!-- Pour futur intégration de One Signal -->
     <div class="wrap">
         <div class="loading outer">
-          <div class="loading inner"></div>
+            <div class="loading inner"></div>
         </div>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#">Crowdlending</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Accueil
                 <span class="sr-only">(current)</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/Identification" routerLinkActive="active">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/Identification" routerLinkActive="active">Login</a>
+                    </li>
+                    <!--Liste des catégories de projets-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Catégories</a>
+                    </li>
+                    <!--Foire Aux Questions pour répondre aux questions des utilisateurs du site-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">F.A.Q.</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <!--Barre de RECHERCHE pour recherche par catégorie de projets-->
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Rechercher</button>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-  
+
     <!-- Page Content -->
     <div class="container">
-  
-      <!-- Jumbotron Header -->
-      <header class="jumbotron my-4">
-        <h1 class="display-3">A Warm Welcome!</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-        <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
-      </header>
-  
-      <!-- Page Features -->
-      <div class="row text-center">
-  
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card h-100">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h1 class="display-3">Concrétiser vos rêves et réaliser vos projets grâce au crowdlunding participatif.</h1>
+            <p class="lead">Vous présentez votre projet sur notre plate-forme, et nous vous aidons à trouver les fonds nécessaires à la réalisation de celui-ci. Mis en ligne votre projet sera visible par un public de masse qui pourra vous soutenir par des dons sans contre-parties,
+                du troc de services, un échange de service,...</p>
+            <a href="#" class="btn btn-primary btn-lg">N'hésitez pas, inscrivez-vous gratuitement <br />pour découvrir tous les projets</a>
+        </header>
+
+        <!--Projets en cours-->
+        <div class="row mb-5">
+            <div class="col-12 position-relative">
+                <h2 class="section-title text-center mb-5">Projets</h2>
+                <p>Entre le rêve et la réalité, il n'y a qu'un pas,
+                    <Br/> Aider les porteurs de projet et à donner vie à leur envie !</p>
+                <a href="#" class="btn btn-primary btn-lg">Faites un don et/ou un troc pour soutenir ceux qui vous font rêver.</a>
             </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
         </div>
-  
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card h-100">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+        <!--Menu des catégories de projets-->
+        <div class="row justify-content-center mb-5" data-aos="fade">
+            <div id="filters" class="filters text-center button-group col-md-7">
+                <button class="btn btn-primary active" data-filter="*">Tout</button>
+                <button class="btn btn-primary" data-filter=".web">Innovation</button>
+                <button class="btn btn-primary" data-filter=".web">Ecologique</button>
+                <button class="btn btn-primary" data-filter=".design">Biologique</button>
+                <button class="btn btn-primary" data-filter=".web">Santé</button>
+                <button class="btn btn-primary" data-filter=".brand">Service</button>
+                <button class="btn btn-primary" data-filter=".brand">Solidarité</button>
             </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
         </div>
-  
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card h-100">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://img.ulule.com/display/16952cb9ede35059ad080408efec92da7eeff836/thumbnail/258x145/presales/8/6/6/58668/enceinte-rouge-detouree-gif-v02.eIviUPlQw4Ph.gif" srcset="https://img.ulule.com/display/dd08d9ca9acb7dab358c392ed9b21007ccbe87f5/thumbnail/640x360/presales/8/6/6/58668/enceinte-rouge-detouree-gif-v02.eIviUPlQw4Ph.gif 2x, https://s3-eu-west-1.amazonaws.com/com.ulule.media/presales/8/6/6/58668/enceinte-rouge-detouree-gif-v02.eIviUPlQw4Ph.gif 3x">
+
+                    <!--Img/Tag coeur animé, sur Img projet, pour ajout du projet aux favoris lors du clic-->
+                    <div class="card-img-overlay">
+                        <button type="button" class="btn btn-light rounded-circle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                         <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <!-- /card-img-overlay -->
+
+                    <div class="card-body">
+                        <h4 class="card-title">Titre projet 1</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                    </div>
+
+
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-  
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card h-100">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-      <!-- /.row -->
-  
+        <!-- /.row -->
+
     </div>
     <!-- /.container -->
-  
+
     <!-- Footer -->
     <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-      </div>
-      <!-- /.container -->
-    </footer> 
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
 
-  
-  </body>
+
+</body>
